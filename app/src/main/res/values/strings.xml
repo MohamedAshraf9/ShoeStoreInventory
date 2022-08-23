@@ -2,4 +2,19 @@
     <string name="app_name">Shoe Store Inventory</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="userName">UserName</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+    <string name="createAcc">Create new account</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcomeDesc">Click next to read the instructions</string>
+    <string name="next">Next</string>
+    <string name="instructions">Instructions</string>
+    <string name="instructionsDesc">1. Click start to see a list of shoes.\n\n 2.You can use the menu to logout. Just click the three dots at the top right corner of the screen.\n\n 3.You can add new shoes. Just click the + button.</string>
+    <string name="start">Start</string>
+    <string name="shoeName">Shoe Name :</string>
+    <string name="company">Company :</string>
+    <string name="size">Size :</string>
+    <string name="description">Description :</string>
+
 </resources>
