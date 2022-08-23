@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.*
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.megahed.shoestoreinventory.R
 import com.megahed.shoestoreinventory.databinding.FragmentShoeListBinding
@@ -31,8 +33,12 @@ class ShoeListFragment : Fragment(),MenuProvider {
         binding = FragmentShoeListBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-
-        mainViewModel.shoeData.observe(viewLifecycleOwner) {
+      /* val shoes= mutableListOf<Shoe>()
+       shoes.add(Shoe("Originals Vegan Samba", 36.0, "adidas", "Vegan Samba trainers in white"))
+       shoes.add(Shoe("Originals Vegan Samba", 36.0, "adidas", "Vegan Samba trainers in white"))
+       shoes.add(Shoe("Originals Vegan Samba", 36.0, "adidas", "Vegan Samba trainers in white"))
+        createShoes(shoes)*/
+        mainViewModel.getShoeLiveData().observe(viewLifecycleOwner) {
            it?.let {
 
                createShoes(it)
@@ -41,7 +47,7 @@ class ShoeListFragment : Fragment(),MenuProvider {
         }
 
         binding.fab.setOnClickListener {
-            view?.findNavController()?.navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
+            findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
         }
 
         val menuHost: MenuHost = requireActivity()
@@ -62,7 +68,7 @@ class ShoeListFragment : Fragment(),MenuProvider {
         context?.let { context ->
             val shoeContainer = binding.list
             shoes.forEach { shoe ->
-                //displayShoe(shoe)
+                displayShoe(shoe)
                 val shoeLayout = ShoeLayout(context)
                 shoeLayout.loadShoe(shoe)
                 shoeContainer.addView(shoeLayout)
@@ -71,7 +77,7 @@ class ShoeListFragment : Fragment(),MenuProvider {
     }
 
     private fun displayShoe(shoe: Shoe) {
-        val listItemShoeBinding: ShoeItemBinding = ShoeItemBinding.inflate(layoutInflater, null, false)
+        val listItemShoeBinding: ShoeItemBinding = DataBindingUtil.inflate(layoutInflater, R.layout.shoe_item, null, false)
 
         listItemShoeBinding.shoeName.text = shoe.name
         listItemShoeBinding.company.text = shoe.company

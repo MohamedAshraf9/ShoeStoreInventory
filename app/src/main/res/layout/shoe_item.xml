@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="shoe_list_item"
+            type="com.megahed.shoestoreinventory.models.Shoe" />
+    </data>
+<androidx.cardview.widget.CardView
     android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="5dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="5dp"
@@ -96,3 +103,5 @@
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
+
+</layout>

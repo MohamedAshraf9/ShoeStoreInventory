@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.StateFlow
 class MainViewModel : ViewModel() {
 
     private val _shoeData= MutableLiveData<MutableList<Shoe>>()
-    val shoeData : LiveData<MutableList<Shoe>> =_shoeData
+    private val shoeData : LiveData<MutableList<Shoe>> =_shoeData
 
 
     init {
@@ -22,5 +22,7 @@ class MainViewModel : ViewModel() {
     fun adShoe(shoe: Shoe){
         _shoeData.value?.add(shoe)
     }
+
+    fun getShoeLiveData(): LiveData<MutableList<Shoe>> = shoeData
 
 }

@@ -25,11 +25,12 @@ class ShoeDetailFragment : Fragment() {
         val root: View = binding.root
 
 
-        val shoe =Shoe(binding.shoeName.editText?.text.toString(),
-            binding.size.editText?.text.toString().toDouble(),binding.company.editText?.text.toString()
-            ,binding.description.editText?.text.toString())
+
 
         binding.save.setOnClickListener {
+            val shoe =Shoe(binding.shoeName.editText?.text.toString(),
+                binding.size.editText?.text.toString().toDouble(),binding.company.editText?.text.toString()
+                ,binding.description.editText?.text.toString())
             mainViewModel.adShoe(shoe)
             view?.findNavController()?.navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
         }
