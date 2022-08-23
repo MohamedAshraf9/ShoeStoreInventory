@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.megahed.shoestoreinventory.databinding.FragmentInstructionBinding
 
 class InstructionFragment : Fragment() {
@@ -20,6 +21,10 @@ class InstructionFragment : Fragment() {
 
         binding = FragmentInstructionBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        binding.next.setOnClickListener {
+            findNavController().navigate(InstructionFragmentDirections.actionInstructionFragmentToShoeListFragment())
+        }
 
         return root
     }

@@ -61,6 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="3dp"
+        android:id="@+id/login"
         android:padding="3dp"
         android:textAllCaps="false"
         android:text="@string/login"/>

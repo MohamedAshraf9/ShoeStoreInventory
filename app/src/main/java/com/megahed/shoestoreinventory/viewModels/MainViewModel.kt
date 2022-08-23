@@ -12,4 +12,15 @@ class MainViewModel : ViewModel() {
     private val _shoeData= MutableLiveData<MutableList<Shoe>>()
     val shoeData : LiveData<MutableList<Shoe>> =_shoeData
 
+
+    init {
+        _shoeData.value?.add(Shoe("Originals Vegan Samba", 36.0, "adidas", "Vegan Samba trainers in white"))
+        _shoeData.value?.add(Shoe("Nike ZoomX SuperRep Surge", 38.0, "Nike", "Very comfortable"))
+        _shoeData.value?.add(Shoe("Originals Vegan Samba1", 39.0, "adidas", "Very comfortable"))
+    }
+
+    fun adShoe(shoe: Shoe){
+        _shoeData.value?.add(shoe)
+    }
+
 }
