@@ -1,14 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".ui.ShoeDetailFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:text="@string/shoeName"
+        android:layout_margin="3dp"
+        android:padding="3dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"/>
 
-</FrameLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/shoeName"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:padding="3dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/shoeName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/company"
+        android:layout_margin="3dp"
+        android:padding="3dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/company"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:padding="3dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/company">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/size"
+        android:layout_margin="3dp"
+        android:padding="3dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/size"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:padding="3dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/size">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/description"
+        android:layout_margin="3dp"
+        android:padding="3dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:padding="3dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/description">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="5dp"
+        android:text="@string/next"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="5dp"
+        android:text="@string/cancel"
+        android:textAllCaps="false" />
+
+</LinearLayout>
+
+
+</LinearLayout>
