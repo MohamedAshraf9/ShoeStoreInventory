@@ -8,6 +8,9 @@
             name="instructionsViewModel"
             type="com.megahed.shoestoreinventory.ui.InstructionFragment" />
     </data>
+
+    <!-- A ConstraintLayout is a ViewGroup which allows you to position and size widgets in a flexible way. -->
+
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"

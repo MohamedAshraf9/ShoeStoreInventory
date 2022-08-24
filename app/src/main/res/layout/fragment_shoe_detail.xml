@@ -7,7 +7,9 @@
             type="com.megahed.shoestoreinventory.viewModels.MainViewModel" />
 
     </data>
-<LinearLayout
+    <!-- A layout that arranges other views either horizontally in a single column or vertically in a single row. -->
+
+    <LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"

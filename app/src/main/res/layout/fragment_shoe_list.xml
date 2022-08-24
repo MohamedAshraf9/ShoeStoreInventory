@@ -10,7 +10,9 @@
             type="com.megahed.shoestoreinventory.ui.ShoeListFragment" />
     </data>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+    <!-- A ConstraintLayout is a ViewGroup which allows you to position and size widgets in a flexible way. -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
