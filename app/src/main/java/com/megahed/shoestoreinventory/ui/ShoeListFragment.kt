@@ -33,6 +33,9 @@ class ShoeListFragment : Fragment(),MenuProvider {
         binding =  DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
         val root: View = binding.root
 
+        binding.shoeListViewModel= mainViewModel
+        binding.lifecycleOwner = this
+
         mainViewModel.getShoeLiveData().observe(viewLifecycleOwner) {
            it?.let {
 

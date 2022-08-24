@@ -27,6 +27,8 @@ class ShoeDetailFragment : Fragment() {
         val root: View = binding.root
 
 
+        binding.mainViewModel= mainViewModel
+        binding.lifecycleOwner = this
 
 
         binding.save.setOnClickListener {

@@ -7,7 +7,7 @@
     <data>
         <variable
             name="shoeListViewModel"
-            type="com.megahed.shoestoreinventory.ui.ShoeListFragment" />
+            type="com.megahed.shoestoreinventory.viewModels.MainViewModel" />
     </data>
 
     <!-- A ConstraintLayout is a ViewGroup which allows you to position and size widgets in a flexible way. -->
