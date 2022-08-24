@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.megahed.shoestoreinventory.R
 import com.megahed.shoestoreinventory.databinding.FragmentWelcomeScreenBinding
 
+
 class WelcomeScreenFragment : Fragment() {
 
     private lateinit var binding: FragmentWelcomeScreenBinding
