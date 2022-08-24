@@ -1,18 +1,11 @@
 package com.megahed.shoestoreinventory.viewModels
 
-import androidx.databinding.Observable
-import androidx.databinding.PropertyChangeRegistry
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.megahed.shoestoreinventory.models.Shoe
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 
-class MainViewModel : ViewModel() , Observable {
-
-    private val propertyChangeRegistry = PropertyChangeRegistry()
-
+class MainViewModel : ViewModel() {
     private val _shoeData= MutableLiveData<MutableList<Shoe>>(mutableListOf())
     private val shoeData : LiveData<MutableList<Shoe>> =_shoeData
 
@@ -28,14 +21,5 @@ class MainViewModel : ViewModel() , Observable {
     }
 
     fun getShoeLiveData(): LiveData<MutableList<Shoe>> = shoeData
-
-
-    override fun addOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
-        propertyChangeRegistry.add(callback)
-    }
-
-    override fun removeOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
-        propertyChangeRegistry.remove(callback)
-    }
 
 }
