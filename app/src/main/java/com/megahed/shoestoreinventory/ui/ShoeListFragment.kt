@@ -30,7 +30,7 @@ class ShoeListFragment : Fragment(),MenuProvider {
         savedInstanceState: Bundle?
     ): View {
 
-        binding = FragmentShoeListBinding.inflate(inflater, container, false)
+        binding =  DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
         val root: View = binding.root
 
         mainViewModel.getShoeLiveData().observe(viewLifecycleOwner) {

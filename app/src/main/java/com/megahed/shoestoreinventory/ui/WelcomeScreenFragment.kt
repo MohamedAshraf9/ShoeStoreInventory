@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.megahed.shoestoreinventory.R
 import com.megahed.shoestoreinventory.databinding.FragmentWelcomeScreenBinding
 
 class WelcomeScreenFragment : Fragment() {
@@ -18,7 +20,7 @@ class WelcomeScreenFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        binding = FragmentWelcomeScreenBinding.inflate(inflater, container, false)
+        binding =  DataBindingUtil.inflate(inflater, R.layout.fragment_welcome_screen, container, false)
         val root: View = binding.root
 
         binding.next.setOnClickListener {
