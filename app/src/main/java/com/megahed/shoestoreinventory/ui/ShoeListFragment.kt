@@ -33,11 +33,6 @@ class ShoeListFragment : Fragment(),MenuProvider {
         binding = FragmentShoeListBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-      /* val shoes= mutableListOf<Shoe>()
-       shoes.add(Shoe("Originals Vegan Samba", 36.0, "adidas", "Vegan Samba trainers in white"))
-       shoes.add(Shoe("Originals Vegan Samba", 36.0, "adidas", "Vegan Samba trainers in white"))
-       shoes.add(Shoe("Originals Vegan Samba", 36.0, "adidas", "Vegan Samba trainers in white"))
-        createShoes(shoes)*/
         mainViewModel.getShoeLiveData().observe(viewLifecycleOwner) {
            it?.let {
 
@@ -68,23 +63,11 @@ class ShoeListFragment : Fragment(),MenuProvider {
         context?.let { context ->
             val shoeContainer = binding.list
             shoes.forEach { shoe ->
-                displayShoe(shoe)
                 val shoeLayout = ShoeLayout(context)
                 shoeLayout.loadShoe(shoe)
                 shoeContainer.addView(shoeLayout)
             }
         }
-    }
-
-    private fun displayShoe(shoe: Shoe) {
-        val listItemShoeBinding: ShoeItemBinding = DataBindingUtil.inflate(layoutInflater, R.layout.shoe_item, null, false)
-
-        listItemShoeBinding.shoeName.text = shoe.name
-        listItemShoeBinding.company.text = shoe.company
-        listItemShoeBinding.size.text = shoe.size.toString()
-        listItemShoeBinding.description.text =  shoe.description
-
-        binding.list.addView(listItemShoeBinding.root)
     }
 
 }
