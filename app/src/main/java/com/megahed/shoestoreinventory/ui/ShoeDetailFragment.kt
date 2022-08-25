@@ -25,9 +25,9 @@ class ShoeDetailFragment : Fragment() {
         binding =  DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_detail, container, false)
         val root: View = binding.root
 
-
-        binding.mainViewModel= mainViewModel
+        binding.mainViewModel = mainViewModel
         binding.lifecycleOwner = this
+        binding.shoe = Shoe()
 
 
         binding.save.setOnClickListener {
