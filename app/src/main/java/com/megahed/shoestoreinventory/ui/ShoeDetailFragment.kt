@@ -29,7 +29,6 @@ class ShoeDetailFragment : Fragment() {
         binding.lifecycleOwner = this
         binding.shoe = Shoe()
 
-
         binding.save.setOnClickListener {
             mainViewModel.adShoe(mainViewModel.shoe)
             view?.findNavController()?.navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
